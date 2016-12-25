@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 25 Dec 2016 12:05:57 GMT
+      - Sun, 25 Dec 2016 13:24:26 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -29,7 +29,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-End-User-Request-Id:
-      - 9958807f-0219-4502-989c-5204ce8ac5d9
+      - 87bd8a85-98a8-4481-aef0-cb231e703a15
       X-Shutterstock-Resource:
       - "/oauth/access_token"
       X-Shutterstock-App-Version:
@@ -66,19 +66,19 @@ http_interactions:
       X-End-User-Country:
       - 'null'
       Set-Cookie:
-      - connect.sid=s%3AQSc5md617uc43-Yhn7Ai2ZaJg2mIPJD4.a4RWgVOioEJNDSWKFSU8ZIMuRYpWLZ9lGtU%2BPjHn6oM;
+      - connect.sid=s%3Atec-hg1eyE61wsqTCytzDHSCQGaWM4qd.UMheB3ekUMVb4NESWJu3hoDAexhtnM3FuPHW0Fx%2B3jg;
         Path=/; HttpOnly
-      - did=56317727-9098-4128-b4ec-ef0ed73a19e6; Max-Age=315360000; Domain=.shutterstock.com;
-        Path=/; Expires=Wed, 23 Dec 2026 12:05:57 GMT; HttpOnly
+      - did=c20e693b-ddf0-48f5-be8f-ebfd97b5e773; Max-Age=315360000; Domain=.shutterstock.com;
+        Path=/; Expires=Wed, 23 Dec 2026 13:24:26 GMT; HttpOnly
       Etag:
-      - W/"12a-henkqOMgHixFKaTCXoq9KQ"
+      - W/"12a-S74DRQARZAanYt+GcFObUg"
       X-Shutterstock-Render-Time-Ms:
-      - '12'
+      - '9'
     body:
       encoding: UTF-8
-      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjcxMTU3fQ.daqeoVuQUpIvF0aBMNSPj-myVyG13sLVovOTEhjYsC1xWJkxoxpFsODzYhtoRa_EnfM55JZWgKHJz-cP2LnYow","expires_in":3600,"token_type":"Bearer"}'
+      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc1ODY2fQ.L0lgW_NF3vTktd00UKTL-iEeLnoCXWWRbHPSyW9YKqrM7FQKYDtzmOiVi5VyV-5HS-171UZWgtr7bQq97_dDcQ","expires_in":3600,"token_type":"Bearer"}'
     http_version: 
-  recorded_at: Sun, 25 Dec 2016 12:05:58 GMT
+  recorded_at: Sun, 25 Dec 2016 13:24:26 GMT
 - request:
     method: get
     uri: https://api.shutterstock.com/v2/images/118139110
@@ -87,7 +87,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjcxMTU3fQ.daqeoVuQUpIvF0aBMNSPj-myVyG13sLVovOTEhjYsC1xWJkxoxpFsODzYhtoRa_EnfM55JZWgKHJz-cP2LnYow
+      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc1ODY2fQ.L0lgW_NF3vTktd00UKTL-iEeLnoCXWWRbHPSyW9YKqrM7FQKYDtzmOiVi5VyV-5HS-171UZWgtr7bQq97_dDcQ
       User-Agent:
       - Ruby Shutterstock API Client
   response:
@@ -98,7 +98,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 25 Dec 2016 12:05:58 GMT
+      - Sun, 25 Dec 2016 13:24:27 GMT
       Content-Type:
       - application/json; charset=utf8
       Content-Length:
@@ -106,7 +106,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-End-User-Request-Id:
-      - 29234253-ca15-4967-a144-52d9456de8dd
+      - 82b6cc63-dae5-479e-9886-474ccca914fd
       X-Shutterstock-Resource:
       - "/v2/images/:id"
       X-Shutterstock-App-Version:
@@ -125,7 +125,7 @@ http_interactions:
         retriever","one animal","pets","play","puppy","purebred dog","studio shot","toy","yellow","young
         animal"],"media_type":"image"}'
     http_version: 
-  recorded_at: Sun, 25 Dec 2016 12:05:58 GMT
+  recorded_at: Sun, 25 Dec 2016 13:24:27 GMT
 - request:
     method: get
     uri: https://api.shutterstock.com/v2/images/118139110/similar
@@ -134,7 +134,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjcxMTU3fQ.daqeoVuQUpIvF0aBMNSPj-myVyG13sLVovOTEhjYsC1xWJkxoxpFsODzYhtoRa_EnfM55JZWgKHJz-cP2LnYow
+      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc1ODY2fQ.L0lgW_NF3vTktd00UKTL-iEeLnoCXWWRbHPSyW9YKqrM7FQKYDtzmOiVi5VyV-5HS-171UZWgtr7bQq97_dDcQ
       User-Agent:
       - Ruby Shutterstock API Client
   response:
@@ -145,7 +145,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 25 Dec 2016 12:05:59 GMT
+      - Sun, 25 Dec 2016 13:24:28 GMT
       Content-Type:
       - application/json; charset=utf8
       Content-Length:
@@ -153,7 +153,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-End-User-Request-Id:
-      - 83256829-916e-46af-8ee9-c98c999058ac
+      - 8dfadf85-6bdd-4e14-8661-6488f8722947
       X-Shutterstock-Resource:
       - "/v2/images/:id/similar"
       X-Shutterstock-App-Version:
@@ -188,5 +188,5 @@ http_interactions:
         retriever dog isolated on white","image_type":"photo","media_type":"image"},{"id":"96777595","aspect":1.5002,"assets":{"preview":{"height":299,"url":"https://image.shutterstock.com/display_pic_with_logo/80789/80789,1330954962,5/stock-photo--purebred-labrador-retriever-in-front-of-a-white-background-96777595.jpg","width":450},"small_thumb":{"height":67,"url":"https://thumb7.shutterstock.com/thumb_small/80789/80789,1330954962,5/stock-photo--purebred-labrador-retriever-in-front-of-a-white-background-96777595.jpg","width":100},"large_thumb":{"height":100,"url":"https://thumb7.shutterstock.com/thumb_large/80789/80789,1330954962,5/stock-photo--purebred-labrador-retriever-in-front-of-a-white-background-96777595.jpg","width":150}},"contributor":{"id":"80789"},"description":"
         purebred  labrador retriever in front of a white background","image_type":"photo","media_type":"image"}]}'
     http_version: 
-  recorded_at: Sun, 25 Dec 2016 12:05:59 GMT
+  recorded_at: Sun, 25 Dec 2016 13:24:28 GMT
 recorded_with: VCR 3.0.3

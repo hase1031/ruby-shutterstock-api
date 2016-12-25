@@ -78,13 +78,21 @@ module ShutterstockAPI
 
 		def find_similar(options = {})
 			@images = self.class.find_similar(self.id, options)
-		end
+    end
+
+    #Image.recommendations([117069988, 152339567], {:max_items => 20, :safe => true})
+    def self.recommendations(ids, options={})
+      opts = client.options
+      options.merge!({:id => ids})
+      opts.merge!({:query => options})
+      self.get( "/images/recommendations", opts).to_hash['data'].map{|data| data["id"]}
+    end
 
     #Image.popular_queries({:language => 'en', :image_type => 'photo'})
     def self.popular_queries(options={})
       opts = client.options
       opts.merge!({:query => options})
-      self.get( "/images/search/popular/queries", opts).to_hash
+      self.get( "/images/search/popular/queries", opts).to_hash['data']
     end
 
 	end

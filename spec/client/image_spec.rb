@@ -38,7 +38,12 @@ describe Image do
   end
 
   it 'should return recommended images' do
-    result = Image.popular_queries
-    expect(result['data'].size).to be 20
+    image_ids = Image.recommendations([117069988, 152339567])
+    expect(image_ids).to be_kind_of Array
+  end
+
+  it 'should return popular queries' do
+    queries = Image.popular_queries
+    expect(queries.size).to be 20
   end
 end

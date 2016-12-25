@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 25 Dec 2016 12:05:53 GMT
+      - Sun, 25 Dec 2016 13:24:22 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -29,7 +29,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-End-User-Request-Id:
-      - 74c27b12-2f58-4b33-86fa-0062ec899116
+      - bec91849-29d2-4d1d-81d3-4da5d8b204f2
       X-Shutterstock-Resource:
       - "/oauth/access_token"
       X-Shutterstock-App-Version:
@@ -66,19 +66,19 @@ http_interactions:
       X-End-User-Country:
       - 'null'
       Set-Cookie:
-      - connect.sid=s%3AY5EkgAg9jDdprY1a1bKzj-ZL8HjAXODe.MEmRSY3TjxAhcl%2FihaF6JGUb7gzjoi4gQkMrurGWjxI;
+      - connect.sid=s%3AxffI5oYhPoNsa-8i7Ty4c4iHmiOkVpkV.5MSVxKesiQAv%2BQjEdS7w7bkrq1zQdXlsCq3mWNYuHgA;
         Path=/; HttpOnly
-      - did=6011ccea-906b-4460-be6b-f97530cefb1c; Max-Age=315360000; Domain=.shutterstock.com;
-        Path=/; Expires=Wed, 23 Dec 2026 12:05:53 GMT; HttpOnly
+      - did=253bd107-ee0d-49d8-9ff4-d6369049eb5b; Max-Age=315360000; Domain=.shutterstock.com;
+        Path=/; Expires=Wed, 23 Dec 2026 13:24:22 GMT; HttpOnly
       Etag:
-      - W/"12a-pNbfeHiKBCU4tA5VfSp2bw"
+      - W/"12a-63/vTeNMeGdRmO/NgKcKBg"
       X-Shutterstock-Render-Time-Ms:
-      - '8'
+      - '20'
     body:
       encoding: UTF-8
-      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjcxMTUzfQ.UnBDXIFtZj5rmQgEoOAjiBq5ILDai9hE2fPjpdOfyhbZvqo2b3eSRK8dxdP7HlTtMOB7fkM6fBqIGoK6zYGhcg","expires_in":3600,"token_type":"Bearer"}'
+      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc1ODYyfQ.eWXAWI_gDEXu_AosU_hu_eJVCwTVrnJ3FHJOdun0SMF2oqSE0ZvHoeOcU5d8zX450tzJObHL4FpST0p32-k_VQ","expires_in":3600,"token_type":"Bearer"}'
     http_version: 
-  recorded_at: Sun, 25 Dec 2016 12:05:54 GMT
+  recorded_at: Sun, 25 Dec 2016 13:24:22 GMT
 - request:
     method: get
     uri: https://api.shutterstock.com/v2/images/118139110
@@ -87,7 +87,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjcxMTUzfQ.UnBDXIFtZj5rmQgEoOAjiBq5ILDai9hE2fPjpdOfyhbZvqo2b3eSRK8dxdP7HlTtMOB7fkM6fBqIGoK6zYGhcg
+      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc1ODYyfQ.eWXAWI_gDEXu_AosU_hu_eJVCwTVrnJ3FHJOdun0SMF2oqSE0ZvHoeOcU5d8zX450tzJObHL4FpST0p32-k_VQ
       User-Agent:
       - Ruby Shutterstock API Client
   response:
@@ -98,7 +98,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 25 Dec 2016 12:05:54 GMT
+      - Sun, 25 Dec 2016 13:24:23 GMT
       Content-Type:
       - application/json; charset=utf8
       Content-Length:
@@ -106,7 +106,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-End-User-Request-Id:
-      - 2b55074b-7de9-41f0-a132-544b292d64bd
+      - 26aeaaa1-ee8a-4ba7-8637-74b69eb49265
       X-Shutterstock-Resource:
       - "/v2/images/:id"
       X-Shutterstock-App-Version:
@@ -125,5 +125,5 @@ http_interactions:
         retriever","one animal","pets","play","puppy","purebred dog","studio shot","toy","yellow","young
         animal"],"media_type":"image"}'
     http_version: 
-  recorded_at: Sun, 25 Dec 2016 12:05:54 GMT
+  recorded_at: Sun, 25 Dec 2016 13:24:23 GMT
 recorded_with: VCR 3.0.3

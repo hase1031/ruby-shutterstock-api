@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 25 Dec 2016 12:05:55 GMT
+      - Sun, 25 Dec 2016 13:24:24 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -29,7 +29,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-End-User-Request-Id:
-      - 4f07d486-d061-4f16-929c-7109ab0b127e
+      - ad19c2b2-1d8c-4906-bf40-6b98c3d1eb0e
       X-Shutterstock-Resource:
       - "/oauth/access_token"
       X-Shutterstock-App-Version:
@@ -66,19 +66,19 @@ http_interactions:
       X-End-User-Country:
       - 'null'
       Set-Cookie:
-      - connect.sid=s%3ArmbA7jPkchgReGxXeAivdHwzp-zRw5ot.9cj5V1Duse%2FSv9bZwJmw0agnST%2BICRU%2FsjSAK9bGGmU;
+      - connect.sid=s%3AUCJbVl2ht3q0u5MZLIzs99dWmVsbypQI.ABylJWDmqbbI0M7wO6210Fa1W00BCK8%2FRGapMDal%2Fbk;
         Path=/; HttpOnly
-      - did=18062df9-1a70-4ffd-88d4-50ed4d27df0c; Max-Age=315360000; Domain=.shutterstock.com;
-        Path=/; Expires=Wed, 23 Dec 2026 12:05:55 GMT; HttpOnly
+      - did=1afcabad-0a43-4b42-8fda-0d39e3b19c4c; Max-Age=315360000; Domain=.shutterstock.com;
+        Path=/; Expires=Wed, 23 Dec 2026 13:24:24 GMT; HttpOnly
       Etag:
-      - W/"12a-fyCvl9J0LYJmuqTQN0NUrQ"
+      - W/"12a-Xig7FysXdfD01YitEqpiQA"
       X-Shutterstock-Render-Time-Ms:
-      - '8'
+      - '9'
     body:
       encoding: UTF-8
-      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjcxMTU1fQ.aMS4sxooJygUaVidCwWc87WfFPVyRDaB-OXr2vSfWVpgVuHpmgZb6Xsx40dkGJGl-KYD56gB4kI0RkUDmM_1LA","expires_in":3600,"token_type":"Bearer"}'
+      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc1ODY0fQ.Yj_QTW1bcMM1bXglWnnK3qlwyevjJAmYcFVl0NTxPMC9MJ05g6Q9RPBm56ILbQODaILsJUsC3SHEVX4lLTQNdA","expires_in":3600,"token_type":"Bearer"}'
     http_version: 
-  recorded_at: Sun, 25 Dec 2016 12:05:55 GMT
+  recorded_at: Sun, 25 Dec 2016 13:24:24 GMT
 - request:
     method: get
     uri: https://api.shutterstock.com/v2/images/118139110/similar
@@ -87,7 +87,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjcxMTU1fQ.aMS4sxooJygUaVidCwWc87WfFPVyRDaB-OXr2vSfWVpgVuHpmgZb6Xsx40dkGJGl-KYD56gB4kI0RkUDmM_1LA
+      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc1ODY0fQ.Yj_QTW1bcMM1bXglWnnK3qlwyevjJAmYcFVl0NTxPMC9MJ05g6Q9RPBm56ILbQODaILsJUsC3SHEVX4lLTQNdA
       User-Agent:
       - Ruby Shutterstock API Client
   response:
@@ -98,7 +98,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 25 Dec 2016 12:05:56 GMT
+      - Sun, 25 Dec 2016 13:24:25 GMT
       Content-Type:
       - application/json; charset=utf8
       Content-Length:
@@ -106,7 +106,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-End-User-Request-Id:
-      - 0a6c1b06-a50a-46d4-b036-757a703d9853
+      - 533d086a-b0c0-48e7-980e-0351c47f80dd
       X-Shutterstock-Resource:
       - "/v2/images/:id/similar"
       X-Shutterstock-App-Version:
@@ -141,5 +141,5 @@ http_interactions:
         retriever dog isolated on white","image_type":"photo","media_type":"image"},{"id":"96777595","aspect":1.5002,"assets":{"preview":{"height":299,"url":"https://image.shutterstock.com/display_pic_with_logo/80789/80789,1330954962,5/stock-photo--purebred-labrador-retriever-in-front-of-a-white-background-96777595.jpg","width":450},"small_thumb":{"height":67,"url":"https://thumb7.shutterstock.com/thumb_small/80789/80789,1330954962,5/stock-photo--purebred-labrador-retriever-in-front-of-a-white-background-96777595.jpg","width":100},"large_thumb":{"height":100,"url":"https://thumb7.shutterstock.com/thumb_large/80789/80789,1330954962,5/stock-photo--purebred-labrador-retriever-in-front-of-a-white-background-96777595.jpg","width":150}},"contributor":{"id":"80789"},"description":"
         purebred  labrador retriever in front of a white background","image_type":"photo","media_type":"image"}]}'
     http_version: 
-  recorded_at: Sun, 25 Dec 2016 12:05:57 GMT
+  recorded_at: Sun, 25 Dec 2016 13:24:25 GMT
 recorded_with: VCR 3.0.3

@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 25 Dec 2016 13:24:31 GMT
+      - Sun, 25 Dec 2016 13:24:33 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -29,7 +29,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-End-User-Request-Id:
-      - fde0aee8-9843-4c5e-9df8-0dfcb7de5ff6
+      - dea44311-ba3a-4100-b085-9a10b745c1f6
       X-Shutterstock-Resource:
       - "/oauth/access_token"
       X-Shutterstock-App-Version:
@@ -66,28 +66,28 @@ http_interactions:
       X-End-User-Country:
       - 'null'
       Set-Cookie:
-      - connect.sid=s%3Ax6vbsYG2uZtwlCc4U-hZcgGL0RxsxQsY.e411ZWhI%2B585G0gFEv52iCP28kx1VWWiUEM4n8HLgTI;
+      - connect.sid=s%3AMtY9StaEgrPhVsqTGdGuDLRT52BenQbg.q3RJpReSsy5%2FLGKsPmQgczTzz4WdV%2FCYxvkJSuIIxS0;
         Path=/; HttpOnly
-      - did=96baa823-126e-429b-a190-3512f93b938d; Max-Age=315360000; Domain=.shutterstock.com;
-        Path=/; Expires=Wed, 23 Dec 2026 13:24:31 GMT; HttpOnly
+      - did=4187f378-675e-4f68-a922-3d8b15a3c121; Max-Age=315360000; Domain=.shutterstock.com;
+        Path=/; Expires=Wed, 23 Dec 2026 13:24:33 GMT; HttpOnly
       Etag:
-      - W/"12a-UEeYOG7Vmxsrp2eBGYiymQ"
+      - W/"12a-+5RhKTr/8Ua42ezfZgNCNw"
       X-Shutterstock-Render-Time-Ms:
-      - '6'
+      - '8'
     body:
       encoding: UTF-8
-      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc1ODcxfQ.eez67UGmD2Js4HQG5kN3-YdB77stqpI3xkUWdcPOgh-jl0tRE59ld8BQTRDZ-cDJ1bSgQKuTw1iYqdmkJjRDPA","expires_in":3600,"token_type":"Bearer"}'
+      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc1ODczfQ.U3uemgudTmxGkURRFanjq2YFmDI-PpykOEwQtez7_koeowfEDEH1e-qygODWofpoZu-Nzi8VLIM7TtDX6yECQA","expires_in":3600,"token_type":"Bearer"}'
     http_version: 
-  recorded_at: Sun, 25 Dec 2016 13:24:31 GMT
+  recorded_at: Sun, 25 Dec 2016 13:24:33 GMT
 - request:
     method: get
-    uri: https://api.shutterstock.com/v2/images/recommendations?id%5B%5D=117069988&id%5B%5D=152339567
+    uri: https://api.shutterstock.com/v2/images/search/popular/queries
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc1ODcxfQ.eez67UGmD2Js4HQG5kN3-YdB77stqpI3xkUWdcPOgh-jl0tRE59ld8BQTRDZ-cDJ1bSgQKuTw1iYqdmkJjRDPA
+      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc1ODczfQ.U3uemgudTmxGkURRFanjq2YFmDI-PpykOEwQtez7_koeowfEDEH1e-qygODWofpoZu-Nzi8VLIM7TtDX6yECQA
       User-Agent:
       - Ruby Shutterstock API Client
   response:
@@ -98,28 +98,30 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 25 Dec 2016 13:24:32 GMT
+      - Sun, 25 Dec 2016 13:24:34 GMT
       Content-Type:
       - application/json; charset=utf8
       Content-Length:
-      - '384'
+      - '246'
       Connection:
       - keep-alive
       X-End-User-Request-Id:
-      - f69cff12-83f8-4db2-91ba-adc20eaaa7ca
+      - 450d6ead-204b-41fc-9566-fc5821e793ff
       X-Shutterstock-Resource:
-      - "/v2/images/recommendations"
+      - "/v2/images/search/popular/queries"
       X-Shutterstock-App-Version:
       - apitwo-731
       Cache-Control:
-      - 'private; max-age: 21600'
+      - 'private; max-age: 43200'
       Etag:
-      - 40b3a48a86145ff026ff834a29e1ba1b
+      - e41b2f86cbd2d18d1f5bdd11d2c1dddc
       X-End-User-Client-Id:
       - "<SSTK_CLIENT_ID>"
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"106363526"},{"id":"113284498"},{"id":"107390756"},{"id":"99379946"},{"id":"133918412"},{"id":"114383710"},{"id":"58565428"},{"id":"117492673"},{"id":"114717280"},{"id":"96698602"},{"id":"112586528"},{"id":"119205097"},{"id":"117069994"},{"id":"96202397"},{"id":"116158189"},{"id":"125053298"},{"id":"96815971"},{"id":"96101114"},{"id":"105631691"},{"id":"104156891"}]}'
+      string: '{"data":["christmas","christmas background","christmas tree","business","2017","background","new
+        year","sky","fireworks","wood texture","family","snow","merry christmas","travel","christmas
+        decoration","wood","winter","fitness","coffee","beach"]}'
     http_version: 
-  recorded_at: Sun, 25 Dec 2016 13:24:32 GMT
+  recorded_at: Sun, 25 Dec 2016 13:24:34 GMT
 recorded_with: VCR 3.0.3
