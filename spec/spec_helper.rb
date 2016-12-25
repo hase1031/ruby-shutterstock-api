@@ -109,11 +109,3 @@ end
 def access_token
   env_or_default(:SSTK_ACCESS_TOKEN)
 end
-
-def username
-  env_or_default(:SSTK_USERNAME)
-end
-
-def password
-  env_or_default(:SSTK_PASSWORD)
-end
