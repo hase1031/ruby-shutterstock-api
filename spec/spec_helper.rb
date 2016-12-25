@@ -6,12 +6,10 @@ require 'shutterstock-client'
 include ShutterstockAPI
 
 DEFAULTS = {
-  SSTK_API_USERNAME: 'basicauthusername',
-  SSTK_API_KEY: 'basicauthapikey',
+  SSTK_CLIENT_ID: 'clientid',
+  SSTK_CLIENT_SECRET: 'clientsecret',
   SSTK_BASE_API_URI: 'http://api.shutterstock.com',
-  SSTK_AUTH_TOKEN: 'basicauthtoken',
-  SSTK_USERNAME: 'testuser',
-  SSTK_PASSWORD: 'testpassword'
+  SSTK_ACCESS_TOKEN: 'accesstoken',
 }
 
 def sensitive_data(c, env_key)
@@ -25,10 +23,8 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.configure_rspec_metadata!
   c.allow_http_connections_when_no_cassette = true
-  sensitive_data(c, :SSTK_API_USERNAME)
-  sensitive_data(c, :SSTK_API_KEY)
-  sensitive_data(c, :SSTK_USERNAME)
-  sensitive_data(c, :SSTK_PASSWORD)
+  sensitive_data(c, :SSTK_CLIENT_ID)
+  sensitive_data(c, :SSTK_CLIENT_SECRET)
 end
 
 if ENV['VCR_OFF']
@@ -39,7 +35,6 @@ end
 uri_without_auth_token = VCR.request_matchers.uri_without_param(:auth_token)
 
 RSpec.configure do |config|
-  config.treat_symbols_as_metadata_keys_with_true_values = true
   # Add VCR to all tests
   config.around(:each) do |example|
     options = example.metadata[:vcr] || {}
@@ -57,28 +52,24 @@ end
 
 def client
 	Client.instance.configure do |config|
-		config.api_username = ENV['SSTK_API_USERNAME'] || "basicauthusername"
-		config.api_key = ENV['SSTK_API_KEY'] || "basicauthapikey"
-		config.username = ENV['SSTK_USERNAME'] || "testuser"
-		config.password = ENV['SSTK_PASSWORD'] || "testpassword"
+		config.client_id = ENV['SSTK_CLIENT_ID'] || "clientid"
+		config.client_secret = ENV['SSTK_CLIENT_SECRET'] || "clientsecret"
 	end
 	Client.instance
 end
 
 def client_double
   double(
-    api_username: api_username,
-    api_key: api_key,
+    client_id: client_id,
+    client_secret: client_secret,
     api_url: base_api_uri,
-    username: username,
-    password: password,
-    auth_token: auth_token,
+    access_token: access_token,
     options: auth_options
   )
 end
 
 def mocked_auth
-  Client.any_instance.stub(:get_auth_token)
+  Client.any_instance.stub(:get_access_token)
   client
   client.stub(:auth_token).and_return(auth_token)
   client.stub(:options).and_return(auth_options)
@@ -89,12 +80,12 @@ private
 def auth_options(opts = {})
   {
     base_uri: base_api_uri,
-    basic_auth: {
-      username: api_username,
-      password: api_key
+    oauth: {
+      client_id: client_id,
+      client_secret: client_secret
     },
     default_params: {
-      auth_token: auth_token
+      access_token: access_token
     }
   }.merge(opts)
 end
@@ -103,20 +94,20 @@ def env_or_default(key)
   ENV[key.to_s] || DEFAULTS[key]
 end
 
-def api_username
-  env_or_default(:SSTK_API_USERNAME)
+def client_id
+  env_or_default(:SSTK_CLIENT_ID)
 end
 
-def api_key
-  env_or_default(:SSTK_API_KEY)
+def client_secret
+  env_or_default(:SSTK_CLIENT_SECRET)
 end
 
 def base_api_uri
   env_or_default(:SSTK_BASE_API_URI)
 end
 
-def auth_token
-  env_or_default(:SSTK_AUTH_TOKEN)
+def access_token
+  env_or_default(:SSTK_ACCESS_TOKEN)
 end
 
 def username

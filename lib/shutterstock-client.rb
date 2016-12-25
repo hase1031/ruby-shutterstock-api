@@ -5,10 +5,8 @@ require 'singleton'
 module ShutterstockAPI
   require_relative './client/driver'
   require_relative './client/configuration'
-  require_relative './client/customer'
   require_relative './client/images'
   require_relative './client/image'
-  require_relative './client/lightbox'
 
 	class Client
 		include HTTParty
@@ -28,27 +26,28 @@ module ShutterstockAPI
 			@config = Configuration.new
 			yield config
 
-			@config.api_url ||= "http://api.shutterstock.com"
-			raise ArgumentError, "API Username not provided" if config.api_username.nil?
-			raise ArgumentError, "API Key not provided" if config.api_key.nil?
+			@config.api_url ||= "https://api.shutterstock.com/v2"
+			raise ArgumentError, "Client ID not provided" if config.client_id.nil?
+			raise ArgumentError, "Client secret not provided" if config.client_secret.nil?
 
 			@options = {
 				base_uri: config.api_url,
-				basic_auth: {
-					username: config.api_username,
-					password: config.api_key
+				oauth: {
+          client_id: config.client_id,
+          client_secret: config.client_secret,
 				}
 			}
 
-			if (config.username && config.password)
-				get_auth_token
-			end
+      if config.access_token.nil?
+        get_access_token
+      end
 
 			@options.delete_if{|k, v| k == :body}
 
 			@options.merge!({
-				default_params: {
-					auth_token: config.auth_token
+				headers: {
+					Authorization: "Bearer #{config.access_token}",
+				  'User-Agent': 'Ruby Shutterstock API Client',
 				}
 			})
 		end
@@ -57,17 +56,17 @@ module ShutterstockAPI
 			! config.nil?
 		end
 
-		def get_auth_token
+		def get_access_token
 			options=@options
-			options[:body] = { :username => config.username, :password => config.password}
-			response = self.class.post( "#{config.api_url}/auth/customer.json", options )
+			options[:body] = { client_id: config.client_id, client_secret: config.client_secret, grant_type: 'client_credentials'}
+			response = self.class.post( "#{config.api_url}/oauth/access_token", options )
 
 			if response.code == 200
-				config.auth_token = response["auth_token"]
+				config.access_token = response["access_token"]
 			else
 				raise RuntimeError, "Something went wrong: #{response.code} #{response.message}"
 			end
-			return config.auth_token
+			config.access_token
 		end
 
 		def method_missing(method, *args, &block)
@@ -82,10 +81,6 @@ module ShutterstockAPI
 			else
 				super
 			end
-		end
-
-		def customers
-			Customer.new({"username" => config.username})
 		end
 
 		# From https://github.com/rubyworks/facets/blob/master/lib/core/facets/string/modulize.rb

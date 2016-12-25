@@ -11,7 +11,7 @@ module ShutterstockAPI
 					return @hash[is_method].to_i == 1 ? true : false
 				end
 			else
-				super()
+				super
 			end
 		end
 

@@ -1,47 +1,52 @@
 module ShutterstockAPI
 	class Image < Driver
-		attr_reader :id, :photo_id, :resource_url, :categories, :model_release, :vector_type,
-			:description, :sizes, :keywords, :web_url, :submitter_id, :submitter, :images
+		attr_reader :id, :description, :keywords, :categories, :model_releases, :image_type, :media_type,
+			:added_date, :assets, :contributor, :releases, :aspect, :images
 
 		def initialize(params = {})
 			@hash                       = params
-			@id                         = params["photo_id"].to_i
-			@illustration               = json_true? params["illustration"]
-			@r_rated                    = json_true? params["r_rated"]
-			@enhanced_license_available = json_true? params["enhanced_license_available"]
-			@is_vector                  = json_true? params["is_vector"]
-			@photo_id                   = params["photo_id"].to_i
-			@resource_url               = params["resource_url"]
+			@id                         = params["id"].to_i
+			@illustration               = json_true? params["is_illustration"]
+      @editorial                  = json_true? params["is_editorial"]
+      @adult                      = json_true? params["is_adult"]
+      @aspect                     = params["aspect"]
+      @added_date                 = params["added_date"]
+      @image_type                 = params["image_type"]
+      @media_type                 = params["media_type"]
 			@categories                 = params["categories"]
-			@model_release              = params["model_release"]
-			@vector_type                = params["vector_type"]
+			@model_release              = json_true? params["has_model_release"]
+      @property_release           = json_true? params["has_property_release"]
+      @releases                   = params["releases"]
+      @model_releases             = params["model_releases"]
 			@description                = params["description"]
-			@sizes                      = params["sizes"]
 			@keywords                   = params["keywords"]
-			@web_url                    = params["web_url"]
-			@submitter_id               = params["submitter_id"].to_i
-			@submitter                  = params["submitter"]
+			@assets                     = params["assets"]
+      @contributor                = params["contributor"]
 		end
 
 		# boolean readers
 		def illustration?
 			@illustration
+    end
+
+    def editorial?
+      @editorial
+    end
+
+    def adult?
+      @adult
+    end
+
+		def model_release?
+			@model_release
 		end
 
-		def r_rated?
-			@r_rated
-		end
-
-		def enhanced_license_available?
-			@enhanced_license_available
-		end
-
-		def is_vector?
-			@is_vector
+		def property_release?
+			@property_release
 		end
 
 		def self.find(opts={})
-			self.new(self.get("/images/#{opts[:id]}.json", client.options).to_hash )
+			self.new(self.get("/images/#{opts[:id]}", client.options).to_hash )
 		end
 
 		def find(opts={})
@@ -52,7 +57,7 @@ module ShutterstockAPI
 		def self.find_similar(id, options = {})
 			opts = client.options
 			opts.merge!({ :query => options})
-			result = self.get( "/images/#{id}/similar.json", opts )
+			result = self.get( "/images/#{id}/similar", opts )
 			Images.new(result.to_hash)
 		end
 
@@ -60,7 +65,7 @@ module ShutterstockAPI
 		def self.search(search, options = {})
 			search_params = {}
 			if search.kind_of? String
-				search_params[:searchterm] = search
+				search_params[:query] = search
 			else
 				search_params = search
 			end
@@ -68,7 +73,7 @@ module ShutterstockAPI
 			opts = client.options
 			opts.merge!({ :query => search_params })
 
-			Images.new( self.get( "/images/search.json", opts).to_hash )
+			Images.new( self.get( "/images/search", opts).to_hash )
 		end
 
 		def find_similar(options = {})

@@ -2,11 +2,17 @@
 http_interactions:
 - request:
     method: post
-    uri: http://<SSTK_API_USERNAME>:<SSTK_API_KEY>@api.shutterstock.com/auth/customer.json
+    uri: https://api.shutterstock.com/v2/oauth/access_token
     body:
-      encoding: US-ASCII
-      string: username=<SSTK_USERNAME>&password=<SSTK_PASSWORD>
-    headers: {}
+      encoding: UTF-8
+      string: client_id=<SSTK_CLIENT_ID>&client_secret=<SSTK_CLIENT_SECRET>&grant_type=client_credentials
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
@@ -15,32 +21,75 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 20 Feb 2014 04:48:31 GMT
+      - Sun, 25 Dec 2016 12:05:53 GMT
       Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
+      - application/json; charset=utf-8
+      Content-Length:
+      - '298'
       Connection:
       - keep-alive
+      X-End-User-Request-Id:
+      - 74c27b12-2f58-4b33-86fa-0062ec899116
+      X-Shutterstock-Resource:
+      - "/oauth/access_token"
+      X-Shutterstock-App-Version:
+      - '1328'
+      X-Powered-By:
+      - Express
+      Content-Security-Policy:
+      - connect-src 'self' sdp-tagcollector.shutterstock.com https://bam.nr-data.net
+        https://api.segment.io; object-src 'self'; media-src 'self'; script-src 'self'
+        'unsafe-inline' 'unsafe-eval' https://www.offset.com https://absinthe.shutterstock.com
+        https://absinthe.picdn.net https://secure.adnxs.com https://cdn.segment.com
+        https://tags.extole.com https://ajax.googleapis.com tagmanager.google.com
+        https://www.google.com https://www.gstatic.com www.googletagmanager.com www.google-analytics.com
+        https://ssl.google-analytics.com www.googleadservices.com js-agent.newrelic.com
+        https://bam.nr-data.net/ *.bounceexchange.com
+      X-Content-Security-Policy:
+      - connect-src 'self' sdp-tagcollector.shutterstock.com https://bam.nr-data.net
+        https://api.segment.io; object-src 'self'; media-src 'self'; script-src 'self'
+        'unsafe-inline' 'unsafe-eval' https://www.offset.com https://absinthe.shutterstock.com
+        https://absinthe.picdn.net https://secure.adnxs.com https://cdn.segment.com
+        https://tags.extole.com https://ajax.googleapis.com tagmanager.google.com
+        https://www.google.com https://www.gstatic.com www.googletagmanager.com www.google-analytics.com
+        https://ssl.google-analytics.com www.googleadservices.com js-agent.newrelic.com
+        https://bam.nr-data.net/ *.bounceexchange.com
+      X-Webkit-Csp:
+      - connect-src 'self' sdp-tagcollector.shutterstock.com https://bam.nr-data.net
+        https://api.segment.io; object-src 'self'; media-src 'self'; script-src 'self'
+        'unsafe-inline' 'unsafe-eval' https://www.offset.com https://absinthe.shutterstock.com
+        https://absinthe.picdn.net https://secure.adnxs.com https://cdn.segment.com
+        https://tags.extole.com https://ajax.googleapis.com tagmanager.google.com
+        https://www.google.com https://www.gstatic.com www.googletagmanager.com www.google-analytics.com
+        https://ssl.google-analytics.com www.googleadservices.com js-agent.newrelic.com
+        https://bam.nr-data.net/ *.bounceexchange.com
+      X-End-User-Country:
+      - 'null'
       Set-Cookie:
-      - apissid=3f94c7395d4cdd77a2d409ea43fd4dea; domain=.shutterstock.com; path=/;
-        expires=Sat, 22-Mar-2014 04:48:31 GMT
-      X-Shutterstock-Data:
-      - IyMjAAAjI15eRU5EXl4=
-      X-Shutterstock-Remote-User:
-      - <SSTK_API_USERNAME>
+      - connect.sid=s%3AY5EkgAg9jDdprY1a1bKzj-ZL8HjAXODe.MEmRSY3TjxAhcl%2FihaF6JGUb7gzjoi4gQkMrurGWjxI;
+        Path=/; HttpOnly
+      - did=6011ccea-906b-4460-be6b-f97530cefb1c; Max-Age=315360000; Domain=.shutterstock.com;
+        Path=/; Expires=Wed, 23 Dec 2026 12:05:53 GMT; HttpOnly
+      Etag:
+      - W/"12a-pNbfeHiKBCU4tA5VfSp2bw"
+      X-Shutterstock-Render-Time-Ms:
+      - '8'
     body:
-      encoding: US-ASCII
-      string: ! '{"language":"en","auth_token":"d43a9cad4054e06e2735c01015786e4d300af773","username":"<SSTK_USERNAME>"}'
+      encoding: UTF-8
+      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjcxMTUzfQ.UnBDXIFtZj5rmQgEoOAjiBq5ILDai9hE2fPjpdOfyhbZvqo2b3eSRK8dxdP7HlTtMOB7fkM6fBqIGoK6zYGhcg","expires_in":3600,"token_type":"Bearer"}'
     http_version: 
-  recorded_at: Thu, 20 Feb 2014 04:48:31 GMT
+  recorded_at: Sun, 25 Dec 2016 12:05:54 GMT
 - request:
     method: get
-    uri: http://<SSTK_API_USERNAME>:<SSTK_API_KEY>@api.shutterstock.com/images/118139110.json?auth_token=d43a9cad4054e06e2735c01015786e4d300af773
+    uri: https://api.shutterstock.com/v2/images/118139110
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Authorization:
+      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjcxMTUzfQ.UnBDXIFtZj5rmQgEoOAjiBq5ILDai9hE2fPjpdOfyhbZvqo2b3eSRK8dxdP7HlTtMOB7fkM6fBqIGoK6zYGhcg
+      User-Agent:
+      - Ruby Shutterstock API Client
   response:
     status:
       code: 200
@@ -49,28 +98,32 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 20 Feb 2014 04:48:31 GMT
+      - Sun, 25 Dec 2016 12:05:54 GMT
       Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
+      - application/json; charset=utf8
+      Content-Length:
+      - '1977'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - apissid=0c6664fb86c9e5515ceb0e242420bd6c; domain=.shutterstock.com; path=/;
-        expires=Sat, 22-Mar-2014 04:48:31 GMT
-      X-Shutterstock-Data:
-      - IyMjAAAjI15eRU5EXl4=
-      X-Shutterstock-Remote-User:
-      - <SSTK_API_USERNAME>
+      X-End-User-Request-Id:
+      - 2b55074b-7de9-41f0-a132-544b292d64bd
+      X-Shutterstock-Resource:
+      - "/v2/images/:id"
+      X-Shutterstock-App-Version:
+      - apitwo-731
+      Cache-Control:
+      - 'private; max-age: 60'
+      Etag:
+      - db9c662516f46908753c30d5174e75e9
+      X-End-User-Client-Id:
+      - "<SSTK_CLIENT_ID>"
     body:
-      encoding: US-ASCII
-      string: ! '{"illustration":0,"r_rated":"0","photo_id":"118139110","enhanced_license_available":"1","resource_url":"http://api.shutterstock.com/images/118139110","categories":[{"category_id":"1","category":"Animals/Wildlife"},{"category_id":"20","category":"NOT-CATEGORIZED"}],"model_release":{"translation_id":"N_A","code":"0"},"vector_type":null,"description":"Adorable
-        Labrador Puppy Playing with a Chew Toy on White Backdrop","sizes":{"small":{"width":"500","file_size_kb":"86","height":"334","display_name":"Small"},"preview":{"url":"http://thumb1.shutterstock.com/photos/display_pic_with_logo/1306729/118139110.jpg"},"supersize":{"file_size_kb":"9876"},"medium":{"width":"1000","file_size_kb":"294","height":"667","display_name":"Medium"},"thumb_large":{"width":"150","url":"http://thumb1.shutterstock.com/photos/thumb_large/1306729/118139110.jpg","height":"100"},"thumb_small":{"width":"100","url":"http://thumb1.shutterstock.com/photos/thumb_small/1306729/118139110.jpg","img":"http://thumb1.shutterstock.com/photos/thumb_small/1306729/118139110.jpg","height":"67"},"huge":{"width":"4635","file_size_kb":"2725","height":"3090","display_name":"Large"}},"keywords":["animal","animal
+      encoding: UTF-8
+      string: '{"id":"118139110","added_date":"2012-11-09","aspect":1.5,"assets":{"small_jpg":{"display_name":"Small","dpi":72,"file_size":88064,"format":"jpg","height":333,"is_licensable":true,"width":500},"medium_jpg":{"display_name":"Med","dpi":300,"file_size":301056,"format":"jpg","height":667,"is_licensable":true,"width":1000},"huge_jpg":{"display_name":"Huge","dpi":300,"file_size":2790400,"format":"jpg","height":3090,"is_licensable":true,"width":4635},"supersize_jpg":{"display_name":"Super","dpi":300,"file_size":10112609,"format":"jpg","height":6180,"is_licensable":false,"width":9270},"huge_tiff":{"display_name":"Huge","dpi":300,"file_size":42966450,"format":"tiff","height":3090,"is_licensable":false,"width":4635},"supersize_tiff":{"display_name":"Super","dpi":300,"file_size":171865800,"format":"tiff","height":6180,"is_licensable":false,"width":9270},"preview":{"height":300,"url":"https://image.shutterstock.com/display_pic_with_logo/1306729/118139110/stock-photo-adorable-labrador-puppy-playing-with-a-chew-toy-on-white-backdrop-118139110.jpg","width":450},"small_thumb":{"height":67,"url":"https://thumb1.shutterstock.com/thumb_small/1306729/118139110/stock-photo-adorable-labrador-puppy-playing-with-a-chew-toy-on-white-backdrop-118139110.jpg","width":100},"large_thumb":{"height":100,"url":"https://thumb1.shutterstock.com/thumb_large/1306729/118139110/stock-photo-adorable-labrador-puppy-playing-with-a-chew-toy-on-white-backdrop-118139110.jpg","width":150}},"categories":[{"id":"1","name":"Animals/Wildlife"},{"id":"20","name":"NOT-CATEGORIZED"}],"contributor":{"id":"1306729"},"description":"Adorable
+        Labrador Puppy Playing with a Chew Toy on White Backdrop","image_type":"photo","is_adult":false,"keywords":["animal","animal
         themes","backgrounds","cute","dog","domestic animals","friendship","full length","isolated","labrador","labrador
         retriever","one animal","pets","play","puppy","purebred dog","studio shot","toy","yellow","young
-        animal"],"is_vector":0,"web_url":"http://www.shutterstock.com/pic.mhtml?id=118139110","submitter_id":"1306729","submitter":"Claire
-        McAdams"}'
+        animal"],"media_type":"image"}'
     http_version: 
-  recorded_at: Thu, 20 Feb 2014 04:48:31 GMT
-recorded_with: VCR 2.8.0
+  recorded_at: Sun, 25 Dec 2016 12:05:54 GMT
+recorded_with: VCR 3.0.3
