@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.shutterstock.com/v2/oauth/access_token
+    body:
+      encoding: UTF-8
+      string: client_id=<SSTK_CLIENT_ID>&client_secret=<SSTK_CLIENT_SECRET>&grant_type=client_credentials
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 25 Dec 2016 13:04:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '298'
+      Connection:
+      - keep-alive
+      X-End-User-Request-Id:
+      - 92cbd936-5425-4f7f-b16d-f5663ffadd57
+      X-Shutterstock-Resource:
+      - "/oauth/access_token"
+      X-Shutterstock-App-Version:
+      - '1328'
+      X-Powered-By:
+      - Express
+      Content-Security-Policy:
+      - connect-src 'self' sdp-tagcollector.shutterstock.com https://bam.nr-data.net
+        https://api.segment.io; object-src 'self'; media-src 'self'; script-src 'self'
+        'unsafe-inline' 'unsafe-eval' https://www.offset.com https://absinthe.shutterstock.com
+        https://absinthe.picdn.net https://secure.adnxs.com https://cdn.segment.com
+        https://tags.extole.com https://ajax.googleapis.com tagmanager.google.com
+        https://www.google.com https://www.gstatic.com www.googletagmanager.com www.google-analytics.com
+        https://ssl.google-analytics.com www.googleadservices.com js-agent.newrelic.com
+        https://bam.nr-data.net/ *.bounceexchange.com
+      X-Content-Security-Policy:
+      - connect-src 'self' sdp-tagcollector.shutterstock.com https://bam.nr-data.net
+        https://api.segment.io; object-src 'self'; media-src 'self'; script-src 'self'
+        'unsafe-inline' 'unsafe-eval' https://www.offset.com https://absinthe.shutterstock.com
+        https://absinthe.picdn.net https://secure.adnxs.com https://cdn.segment.com
+        https://tags.extole.com https://ajax.googleapis.com tagmanager.google.com
+        https://www.google.com https://www.gstatic.com www.googletagmanager.com www.google-analytics.com
+        https://ssl.google-analytics.com www.googleadservices.com js-agent.newrelic.com
+        https://bam.nr-data.net/ *.bounceexchange.com
+      X-Webkit-Csp:
+      - connect-src 'self' sdp-tagcollector.shutterstock.com https://bam.nr-data.net
+        https://api.segment.io; object-src 'self'; media-src 'self'; script-src 'self'
+        'unsafe-inline' 'unsafe-eval' https://www.offset.com https://absinthe.shutterstock.com
+        https://absinthe.picdn.net https://secure.adnxs.com https://cdn.segment.com
+        https://tags.extole.com https://ajax.googleapis.com tagmanager.google.com
+        https://www.google.com https://www.gstatic.com www.googletagmanager.com www.google-analytics.com
+        https://ssl.google-analytics.com www.googleadservices.com js-agent.newrelic.com
+        https://bam.nr-data.net/ *.bounceexchange.com
+      X-End-User-Country:
+      - 'null'
+      Set-Cookie:
+      - connect.sid=s%3AHxfHs2WHWdXUy27ZuvHSrhXvypOfwxZg.7Jh%2Fv5qe61pMFvCB50NkrI%2BYYtTk5gyeQTo%2FICen%2BTA;
+        Path=/; HttpOnly
+      - did=e2de1bed-15d5-4c86-9c97-e47794d57402; Max-Age=315360000; Domain=.shutterstock.com;
+        Path=/; Expires=Wed, 23 Dec 2026 13:04:48 GMT; HttpOnly
+      Etag:
+      - W/"12a-HcsMTVlREq9nU0xZpm2a4A"
+      X-Shutterstock-Render-Time-Ms:
+      - '9'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc0Njg4fQ.SUa8aZYfGdmTQ_4G2XCHRwzRkmYukfNB5kdCHnakbJyDgZPWh_AFH4NQnTkbLXSqwFEqlv22KG5Tv8GoU2nWPg","expires_in":3600,"token_type":"Bearer"}'
+    http_version: 
+  recorded_at: Sun, 25 Dec 2016 13:04:48 GMT
+- request:
+    method: get
+    uri: https://api.shutterstock.com/v2/images/search/popular/queries
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc0Njg4fQ.SUa8aZYfGdmTQ_4G2XCHRwzRkmYukfNB5kdCHnakbJyDgZPWh_AFH4NQnTkbLXSqwFEqlv22KG5Tv8GoU2nWPg
+      User-Agent:
+      - Ruby Shutterstock API Client
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 25 Dec 2016 13:04:49 GMT
+      Content-Type:
+      - application/json; charset=utf8
+      Content-Length:
+      - '246'
+      Connection:
+      - keep-alive
+      X-End-User-Request-Id:
+      - 9e310cbc-94eb-4dd2-983f-f89a6cba933a
+      X-Shutterstock-Resource:
+      - "/v2/images/search/popular/queries"
+      X-Shutterstock-App-Version:
+      - apitwo-731
+      Cache-Control:
+      - 'private; max-age: 43200'
+      Etag:
+      - e41b2f86cbd2d18d1f5bdd11d2c1dddc
+      X-End-User-Client-Id:
+      - "<SSTK_CLIENT_ID>"
+    body:
+      encoding: UTF-8
+      string: '{"data":["christmas","christmas background","christmas tree","business","2017","background","new
+        year","sky","fireworks","wood texture","family","snow","merry christmas","travel","christmas
+        decoration","wood","winter","fitness","coffee","beach"]}'
+    http_version: 
+  recorded_at: Sun, 25 Dec 2016 13:04:49 GMT
+recorded_with: VCR 3.0.3

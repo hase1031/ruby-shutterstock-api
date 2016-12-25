@@ -36,4 +36,9 @@ describe Image do
     expect(results).to be_kind_of Images
     expect(results.size).to be >= 20
   end
+
+  it 'should return recommended images' do
+    result = Image.popular_queries
+    expect(result['data'].size).to be 20
+  end
 end

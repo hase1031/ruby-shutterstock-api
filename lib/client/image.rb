@@ -80,5 +80,12 @@ module ShutterstockAPI
 			@images = self.class.find_similar(self.id, options)
 		end
 
+    #Image.popular_queries({:language => 'en', :image_type => 'photo'})
+    def self.popular_queries(options={})
+      opts = client.options
+      opts.merge!({:query => options})
+      self.get( "/images/search/popular/queries", opts).to_hash
+    end
+
 	end
 end
