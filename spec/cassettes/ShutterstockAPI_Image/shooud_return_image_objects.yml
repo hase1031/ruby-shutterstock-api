@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.shutterstock.com/v2/oauth/access_token
+    body:
+      encoding: UTF-8
+      string: client_id=<SSTK_CLIENT_ID>&client_secret=<SSTK_CLIENT_SECRET>&grant_type=client_credentials
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 25 Dec 2016 14:03:32 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '298'
+      Connection:
+      - keep-alive
+      X-End-User-Request-Id:
+      - 173babbd-0180-4cab-abfe-f048b066e244
+      X-Shutterstock-Resource:
+      - "/oauth/access_token"
+      X-Shutterstock-App-Version:
+      - '1328'
+      X-Powered-By:
+      - Express
+      Content-Security-Policy:
+      - connect-src 'self' sdp-tagcollector.shutterstock.com https://bam.nr-data.net
+        https://api.segment.io; object-src 'self'; media-src 'self'; script-src 'self'
+        'unsafe-inline' 'unsafe-eval' https://www.offset.com https://absinthe.shutterstock.com
+        https://absinthe.picdn.net https://secure.adnxs.com https://cdn.segment.com
+        https://tags.extole.com https://ajax.googleapis.com tagmanager.google.com
+        https://www.google.com https://www.gstatic.com www.googletagmanager.com www.google-analytics.com
+        https://ssl.google-analytics.com www.googleadservices.com js-agent.newrelic.com
+        https://bam.nr-data.net/ *.bounceexchange.com
+      X-Content-Security-Policy:
+      - connect-src 'self' sdp-tagcollector.shutterstock.com https://bam.nr-data.net
+        https://api.segment.io; object-src 'self'; media-src 'self'; script-src 'self'
+        'unsafe-inline' 'unsafe-eval' https://www.offset.com https://absinthe.shutterstock.com
+        https://absinthe.picdn.net https://secure.adnxs.com https://cdn.segment.com
+        https://tags.extole.com https://ajax.googleapis.com tagmanager.google.com
+        https://www.google.com https://www.gstatic.com www.googletagmanager.com www.google-analytics.com
+        https://ssl.google-analytics.com www.googleadservices.com js-agent.newrelic.com
+        https://bam.nr-data.net/ *.bounceexchange.com
+      X-Webkit-Csp:
+      - connect-src 'self' sdp-tagcollector.shutterstock.com https://bam.nr-data.net
+        https://api.segment.io; object-src 'self'; media-src 'self'; script-src 'self'
+        'unsafe-inline' 'unsafe-eval' https://www.offset.com https://absinthe.shutterstock.com
+        https://absinthe.picdn.net https://secure.adnxs.com https://cdn.segment.com
+        https://tags.extole.com https://ajax.googleapis.com tagmanager.google.com
+        https://www.google.com https://www.gstatic.com www.googletagmanager.com www.google-analytics.com
+        https://ssl.google-analytics.com www.googleadservices.com js-agent.newrelic.com
+        https://bam.nr-data.net/ *.bounceexchange.com
+      X-End-User-Country:
+      - 'null'
+      Set-Cookie:
+      - connect.sid=s%3A3phOcKdXmOKTc0mjQZehs7T3jXaRDifv.BZqyS44Cdxk6qES3lG6QqBUsGdCepInKWUtZewp7xag;
+        Path=/; HttpOnly
+      - did=b489d00d-6a9b-4e6d-aca2-0d315961247f; Max-Age=315360000; Domain=.shutterstock.com;
+        Path=/; Expires=Wed, 23 Dec 2026 14:03:32 GMT; HttpOnly
+      Etag:
+      - W/"12a-F1A4bEQuQtDmAFkLGtkGPw"
+      X-Shutterstock-Render-Time-Ms:
+      - '22'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc4MjEyfQ.kunvnMbWpyOAKOvsWyfbxVFmUwOOw6a2DWhaHsYPBcU0kPF7omyoBB1-6rApsheVDlk-WXYk-T4BU4vhMrIw0w","expires_in":3600,"token_type":"Bearer"}'
+    http_version: 
+  recorded_at: Sun, 25 Dec 2016 14:03:32 GMT
+- request:
+    method: get
+    uri: https://api.shutterstock.com/v2/images?id%5B%5D=241570090&id%5B%5D=409218703
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc4MjEyfQ.kunvnMbWpyOAKOvsWyfbxVFmUwOOw6a2DWhaHsYPBcU0kPF7omyoBB1-6rApsheVDlk-WXYk-T4BU4vhMrIw0w
+      User-Agent:
+      - Ruby Shutterstock API Client
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 25 Dec 2016 14:03:33 GMT
+      Content-Type:
+      - application/json; charset=utf8
+      Content-Length:
+      - '1418'
+      Connection:
+      - keep-alive
+      X-End-User-Request-Id:
+      - 934b2c66-bc71-475f-8fef-ba2c15f7d67e
+      X-Shutterstock-Resource:
+      - "/v2/images"
+      X-Shutterstock-App-Version:
+      - apitwo-731
+      Cache-Control:
+      - 'private; max-age: 60'
+      Etag:
+      - aa2e34342d6e1b1f80ae2fe62c1c6e48
+      X-End-User-Client-Id:
+      - "<SSTK_CLIENT_ID>"
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"241570090","aspect":1.3333,"assets":{"preview":{"height":337,"url":"https://image.shutterstock.com/display_pic_with_logo/2364116/241570090/stock-vector-drum-snare-logo-symbol-icon-graphic-vector-241570090.jpg","width":450},"small_thumb":{"height":75,"url":"https://thumb1.shutterstock.com/thumb_small/2364116/241570090/stock-vector-drum-snare-logo-symbol-icon-graphic-vector-241570090.jpg","width":100},"large_thumb":{"height":113,"url":"https://thumb1.shutterstock.com/thumb_large/2364116/241570090/stock-vector-drum-snare-logo-symbol-icon-graphic-vector-241570090.jpg","width":150}},"contributor":{"id":"2364116"},"description":"Drum,
+        Snare ,logo, symbol, icon,graphic,vector.","image_type":"vector","media_type":"image"},{"id":"409218703","aspect":1,"assets":{"preview":{"height":450,"url":"https://image.shutterstock.com/display_pic_with_logo/356458/409218703/stock-photo-ramadan-drum-d-rendered-isolated-409218703.jpg","width":450},"small_thumb":{"height":100,"url":"https://thumb10.shutterstock.com/thumb_small/356458/409218703/stock-photo-ramadan-drum-d-rendered-isolated-409218703.jpg","width":100},"large_thumb":{"height":150,"url":"https://thumb10.shutterstock.com/thumb_large/356458/409218703/stock-photo-ramadan-drum-d-rendered-isolated-409218703.jpg","width":150}},"contributor":{"id":"356458"},"description":"Ramadan
+        drum 3D Rendered Isolated","image_type":"photo","media_type":"image"}]}'
+    http_version: 
+  recorded_at: Sun, 25 Dec 2016 14:03:33 GMT
+recorded_with: VCR 3.0.3

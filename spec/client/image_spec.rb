@@ -15,6 +15,11 @@ describe Image do
     expect(image.id).to eql id
   end
 
+  it 'shooud return image objects' do
+    result = Image.find(id: [241570090, 409218703])
+    expect(result).to be_kind_of Images
+  end
+
   it 'should return similar images' do
     result = Image.find_similar(id)
     expect(result).to_not be_nil
@@ -38,7 +43,7 @@ describe Image do
   end
 
   it 'should return recommended images' do
-    image_ids = Image.recommendations([117069988, 152339567])
+    image_ids = Image.recommendations(id: [117069988, 152339567])
     expect(image_ids).to be_kind_of Array
   end
 

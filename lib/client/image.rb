@@ -45,13 +45,23 @@ module ShutterstockAPI
 			@property_release
 		end
 
-		def self.find(opts={})
-			self.new(self.get("/images/#{opts[:id]}", client.options).to_hash )
+    #Image.find({:id => 409218703, :view => 'full'})
+    #Image.find({:id => [409218703, 241570090], :view => 'full'})
+    def self.find(options={})
+      opts = client.options
+      if options[:id].kind_of? Array
+        opts.merge!({:query => options})
+        Images.new(self.get("/images", opts).to_hash)
+      else
+        id = options.delete(:id)
+        opts.merge!({:query => options})
+        self.new(self.get("/images/#{id}", opts).to_hash)
+      end
 		end
 
 		def find(opts={})
 			self.class.find(opts)
-		end
+    end
 
 		#Image.find_similar(12345, {:page_number => 2, :sort_order => 'random'})
 		def self.find_similar(id, options = {})
@@ -80,10 +90,10 @@ module ShutterstockAPI
 			@images = self.class.find_similar(self.id, options)
     end
 
-    #Image.recommendations([117069988, 152339567], {:max_items => 20, :safe => true})
-    def self.recommendations(ids, options={})
+    #Image.recommendations(:id => [117069988, 152339567], :max_items => 20, :safe => true})
+    def self.recommendations(options={})
       opts = client.options
-      options.merge!({:id => ids})
+      options[:id] = (options[:id].kind_of? Array) ? options[:id] : [options[:id]]
       opts.merge!({:query => options})
       self.get( "/images/recommendations", opts).to_hash['data'].map{|data| data["id"]}
     end
