@@ -4,6 +4,7 @@ require 'singleton'
 
 module ShutterstockAPI
   require_relative './client/driver'
+  require_relative './client/access_token'
   require_relative './client/configuration'
   require_relative './client/images'
   require_relative './client/image'
@@ -46,8 +47,8 @@ module ShutterstockAPI
 
 			@options.merge!({
 				headers: {
-					Authorization: "Bearer #{config.access_token}",
-				  'User-Agent': 'Ruby Shutterstock API Client',
+					'Authorization' => "Bearer #{config.access_token.token}",
+				  'User-Agent' => 'Ruby Shutterstock API Client',
 				}
 			})
 		end
@@ -62,11 +63,15 @@ module ShutterstockAPI
 			response = self.class.post( "#{config.api_url}/oauth/access_token", options )
 
 			if response.code == 200
-				config.access_token = response["access_token"]
+				config.access_token = ShutterstockAPI::AccessToken.new(response)
 			else
 				raise RuntimeError, "Something went wrong: #{response.code} #{response.message}"
 			end
 			config.access_token
+		end
+
+		def token_expired?
+			config.access_token.expired?
 		end
 
 		def method_missing(method, *args, &block)

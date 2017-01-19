@@ -1,6 +1,6 @@
 module ShutterstockAPI
 	class Configuration
-		# @return [String] The basic auth token.
+		# @return [AccessToken] The basic auth token.
 		attr_accessor :access_token
 
 		# @return [String] The API url.

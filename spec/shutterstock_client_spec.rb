@@ -56,7 +56,7 @@ describe Client do
           client_id: client_id,
           client_secret: client_secret
         )
-        expect(subject.options[:headers][:Authorization]).to match(/\w+/)
+        expect(subject.options[:headers]['Authorization']).to match(/\w+/)
       end
     end
   end
