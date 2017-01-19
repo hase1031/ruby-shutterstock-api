@@ -47,7 +47,7 @@ module ShutterstockAPI
 
 			@options.merge!({
 				headers: {
-					'Authorization' => "Bearer #{config.access_token.token}",
+					'Authorization' => bearer_token(config.access_token.token),
 				  'User-Agent' => 'Ruby Shutterstock API Client',
 				}
 			})
@@ -72,7 +72,12 @@ module ShutterstockAPI
 
 		def token_expired?
 			config.access_token.expired?
-		end
+    end
+
+    def refresh_access_token
+      access_token = get_access_token
+      @options[:headers]['Authorization'] = bearer_token(access_token.token)
+    end
 
 		def method_missing(method, *args, &block)
 			method = method.to_s
@@ -106,6 +111,12 @@ module ShutterstockAPI
 				gsub(/\s/, '_').
 				gsub(/__+/, '_').
 				downcase
-		end
+    end
+
+    private
+
+    def bearer_token(token)
+      "Bearer #{token}"
+    end
 	end
 end
