@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 25 Dec 2016 12:06:04 GMT
+      - Sun, 25 Dec 2016 13:24:31 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -29,7 +29,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-End-User-Request-Id:
-      - de971ce1-e7b1-4f64-a99b-bc1f2035c658
+      - fde0aee8-9843-4c5e-9df8-0dfcb7de5ff6
       X-Shutterstock-Resource:
       - "/oauth/access_token"
       X-Shutterstock-App-Version:
@@ -66,28 +66,28 @@ http_interactions:
       X-End-User-Country:
       - 'null'
       Set-Cookie:
-      - connect.sid=s%3A0IUTsrfGOZr5XmZXgbxizpeLOZj0Pi3m.JmF1g4hkWMlFggyL3DElD4nT%2BmkVM%2BY5wmslZzIpwT4;
+      - connect.sid=s%3Ax6vbsYG2uZtwlCc4U-hZcgGL0RxsxQsY.e411ZWhI%2B585G0gFEv52iCP28kx1VWWiUEM4n8HLgTI;
         Path=/; HttpOnly
-      - did=2cc658a5-56eb-4a48-a646-71d509453b5a; Max-Age=315360000; Domain=.shutterstock.com;
-        Path=/; Expires=Wed, 23 Dec 2026 12:06:04 GMT; HttpOnly
+      - did=96baa823-126e-429b-a190-3512f93b938d; Max-Age=315360000; Domain=.shutterstock.com;
+        Path=/; Expires=Wed, 23 Dec 2026 13:24:31 GMT; HttpOnly
       Etag:
-      - W/"12a-O430InRIiuRwRyvDPxPILw"
+      - W/"12a-UEeYOG7Vmxsrp2eBGYiymQ"
       X-Shutterstock-Render-Time-Ms:
-      - '7'
+      - '6'
     body:
       encoding: UTF-8
-      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjcxMTY0fQ.YQAW-lhRK-S2BAVXHEND0-a_NWhhtgrIdqTRsomoW6oxSp6OzcELndV5XGOxDkc4A55H4kP3iqZpLFwI4qWEBw","expires_in":3600,"token_type":"Bearer"}'
+      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc1ODcxfQ.eez67UGmD2Js4HQG5kN3-YdB77stqpI3xkUWdcPOgh-jl0tRE59ld8BQTRDZ-cDJ1bSgQKuTw1iYqdmkJjRDPA","expires_in":3600,"token_type":"Bearer"}'
     http_version: 
-  recorded_at: Sun, 25 Dec 2016 12:06:04 GMT
+  recorded_at: Sun, 25 Dec 2016 13:24:31 GMT
 - request:
     method: get
-    uri: https://api.shutterstock.com/v2/images/118139110
+    uri: https://api.shutterstock.com/v2/images/recommendations?id%5B%5D=117069988&id%5B%5D=152339567
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjcxMTY0fQ.YQAW-lhRK-S2BAVXHEND0-a_NWhhtgrIdqTRsomoW6oxSp6OzcELndV5XGOxDkc4A55H4kP3iqZpLFwI4qWEBw
+      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc1ODcxfQ.eez67UGmD2Js4HQG5kN3-YdB77stqpI3xkUWdcPOgh-jl0tRE59ld8BQTRDZ-cDJ1bSgQKuTw1iYqdmkJjRDPA
       User-Agent:
       - Ruby Shutterstock API Client
   response:
@@ -98,32 +98,28 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 25 Dec 2016 12:06:05 GMT
+      - Sun, 25 Dec 2016 13:24:32 GMT
       Content-Type:
       - application/json; charset=utf8
       Content-Length:
-      - '1977'
+      - '384'
       Connection:
       - keep-alive
       X-End-User-Request-Id:
-      - 8bfeaa55-5b79-41ad-a112-6e937bae0c3b
+      - f69cff12-83f8-4db2-91ba-adc20eaaa7ca
       X-Shutterstock-Resource:
-      - "/v2/images/:id"
+      - "/v2/images/recommendations"
       X-Shutterstock-App-Version:
       - apitwo-731
       Cache-Control:
-      - 'private; max-age: 60'
+      - 'private; max-age: 21600'
       Etag:
-      - db9c662516f46908753c30d5174e75e9
+      - 40b3a48a86145ff026ff834a29e1ba1b
       X-End-User-Client-Id:
       - "<SSTK_CLIENT_ID>"
     body:
       encoding: UTF-8
-      string: '{"id":"118139110","added_date":"2012-11-09","aspect":1.5,"assets":{"small_jpg":{"display_name":"Small","dpi":72,"file_size":88064,"format":"jpg","height":333,"is_licensable":true,"width":500},"medium_jpg":{"display_name":"Med","dpi":300,"file_size":301056,"format":"jpg","height":667,"is_licensable":true,"width":1000},"huge_jpg":{"display_name":"Huge","dpi":300,"file_size":2790400,"format":"jpg","height":3090,"is_licensable":true,"width":4635},"supersize_jpg":{"display_name":"Super","dpi":300,"file_size":10112609,"format":"jpg","height":6180,"is_licensable":false,"width":9270},"huge_tiff":{"display_name":"Huge","dpi":300,"file_size":42966450,"format":"tiff","height":3090,"is_licensable":false,"width":4635},"supersize_tiff":{"display_name":"Super","dpi":300,"file_size":171865800,"format":"tiff","height":6180,"is_licensable":false,"width":9270},"preview":{"height":300,"url":"https://image.shutterstock.com/display_pic_with_logo/1306729/118139110/stock-photo-adorable-labrador-puppy-playing-with-a-chew-toy-on-white-backdrop-118139110.jpg","width":450},"small_thumb":{"height":67,"url":"https://thumb1.shutterstock.com/thumb_small/1306729/118139110/stock-photo-adorable-labrador-puppy-playing-with-a-chew-toy-on-white-backdrop-118139110.jpg","width":100},"large_thumb":{"height":100,"url":"https://thumb1.shutterstock.com/thumb_large/1306729/118139110/stock-photo-adorable-labrador-puppy-playing-with-a-chew-toy-on-white-backdrop-118139110.jpg","width":150}},"categories":[{"id":"1","name":"Animals/Wildlife"},{"id":"20","name":"NOT-CATEGORIZED"}],"contributor":{"id":"1306729"},"description":"Adorable
-        Labrador Puppy Playing with a Chew Toy on White Backdrop","image_type":"photo","is_adult":false,"keywords":["animal","animal
-        themes","backgrounds","cute","dog","domestic animals","friendship","full length","isolated","labrador","labrador
-        retriever","one animal","pets","play","puppy","purebred dog","studio shot","toy","yellow","young
-        animal"],"media_type":"image"}'
+      string: '{"data":[{"id":"106363526"},{"id":"113284498"},{"id":"107390756"},{"id":"99379946"},{"id":"133918412"},{"id":"114383710"},{"id":"58565428"},{"id":"117492673"},{"id":"114717280"},{"id":"96698602"},{"id":"112586528"},{"id":"119205097"},{"id":"117069994"},{"id":"96202397"},{"id":"116158189"},{"id":"125053298"},{"id":"96815971"},{"id":"96101114"},{"id":"105631691"},{"id":"104156891"}]}'
     http_version: 
-  recorded_at: Sun, 25 Dec 2016 12:06:05 GMT
+  recorded_at: Sun, 25 Dec 2016 13:24:32 GMT
 recorded_with: VCR 3.0.3

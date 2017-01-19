@@ -28,10 +28,8 @@ All subsequent calls will use these configuration options.
 require 'shutterstock-client'
 
 ShutterstockAPI::Client.instance.configure do |config|
-  config.api_username = "api_username"
-  config.api_key = "sshhhhh secret"
-  config.username = "username"
-  config.password = "secret"
+  config.client_id = "client_id"
+  config.client_secret = "client_secret"
 end
 ```
 
@@ -85,8 +83,6 @@ lightbox.remove_image(image_id: 987654321)
 
 ```ruby
 image = ShutterstockAPI::Image.find(id: 118139110)
-image.sizes
-image.sizes["preview"]
 image.keywords
 
 ShutterstockAPI::Image.find_similar(118139110, {:page_number => 2, :sort_order => 'random'})
@@ -132,7 +128,5 @@ You can invoke it via `rake rubocop` or run `rubocop --help` for more options.
 This library aims to support and is tested against the following Ruby
 versions:
 
-* Ruby 1.9.3
-* Ruby 2.0.0
-* Ruby 2.1.0
+* Ruby 2.2.4 or higher
 * JRuby 1.7.9 in Ruby 1.9 mode

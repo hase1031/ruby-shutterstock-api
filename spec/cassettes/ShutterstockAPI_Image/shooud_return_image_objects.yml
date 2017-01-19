@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 25 Dec 2016 12:06:04 GMT
+      - Sun, 25 Dec 2016 14:03:32 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -29,7 +29,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-End-User-Request-Id:
-      - de971ce1-e7b1-4f64-a99b-bc1f2035c658
+      - 173babbd-0180-4cab-abfe-f048b066e244
       X-Shutterstock-Resource:
       - "/oauth/access_token"
       X-Shutterstock-App-Version:
@@ -66,28 +66,28 @@ http_interactions:
       X-End-User-Country:
       - 'null'
       Set-Cookie:
-      - connect.sid=s%3A0IUTsrfGOZr5XmZXgbxizpeLOZj0Pi3m.JmF1g4hkWMlFggyL3DElD4nT%2BmkVM%2BY5wmslZzIpwT4;
+      - connect.sid=s%3A3phOcKdXmOKTc0mjQZehs7T3jXaRDifv.BZqyS44Cdxk6qES3lG6QqBUsGdCepInKWUtZewp7xag;
         Path=/; HttpOnly
-      - did=2cc658a5-56eb-4a48-a646-71d509453b5a; Max-Age=315360000; Domain=.shutterstock.com;
-        Path=/; Expires=Wed, 23 Dec 2026 12:06:04 GMT; HttpOnly
+      - did=b489d00d-6a9b-4e6d-aca2-0d315961247f; Max-Age=315360000; Domain=.shutterstock.com;
+        Path=/; Expires=Wed, 23 Dec 2026 14:03:32 GMT; HttpOnly
       Etag:
-      - W/"12a-O430InRIiuRwRyvDPxPILw"
+      - W/"12a-F1A4bEQuQtDmAFkLGtkGPw"
       X-Shutterstock-Render-Time-Ms:
-      - '7'
+      - '22'
     body:
       encoding: UTF-8
-      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjcxMTY0fQ.YQAW-lhRK-S2BAVXHEND0-a_NWhhtgrIdqTRsomoW6oxSp6OzcELndV5XGOxDkc4A55H4kP3iqZpLFwI4qWEBw","expires_in":3600,"token_type":"Bearer"}'
+      string: '{"access_token":"1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc4MjEyfQ.kunvnMbWpyOAKOvsWyfbxVFmUwOOw6a2DWhaHsYPBcU0kPF7omyoBB1-6rApsheVDlk-WXYk-T4BU4vhMrIw0w","expires_in":3600,"token_type":"Bearer"}'
     http_version: 
-  recorded_at: Sun, 25 Dec 2016 12:06:04 GMT
+  recorded_at: Sun, 25 Dec 2016 14:03:32 GMT
 - request:
     method: get
-    uri: https://api.shutterstock.com/v2/images/118139110
+    uri: https://api.shutterstock.com/v2/images?id%5B%5D=241570090&id%5B%5D=409218703
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjcxMTY0fQ.YQAW-lhRK-S2BAVXHEND0-a_NWhhtgrIdqTRsomoW6oxSp6OzcELndV5XGOxDkc4A55H4kP3iqZpLFwI4qWEBw
+      - Bearer 1/eyJjbGllbnRfaWQiOiIzZGI0OWE2NWZlZTYwZmZhMjZhYiIsInJlYWxtIjoiY3VzdG9tZXIiLCJzY29wZSI6InVzZXIudmlldyIsImNsaWVudF9ncmFudCI6dHJ1ZSwiZXhwIjoxNDgyNjc4MjEyfQ.kunvnMbWpyOAKOvsWyfbxVFmUwOOw6a2DWhaHsYPBcU0kPF7omyoBB1-6rApsheVDlk-WXYk-T4BU4vhMrIw0w
       User-Agent:
       - Ruby Shutterstock API Client
   response:
@@ -98,32 +98,30 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 25 Dec 2016 12:06:05 GMT
+      - Sun, 25 Dec 2016 14:03:33 GMT
       Content-Type:
       - application/json; charset=utf8
       Content-Length:
-      - '1977'
+      - '1418'
       Connection:
       - keep-alive
       X-End-User-Request-Id:
-      - 8bfeaa55-5b79-41ad-a112-6e937bae0c3b
+      - 934b2c66-bc71-475f-8fef-ba2c15f7d67e
       X-Shutterstock-Resource:
-      - "/v2/images/:id"
+      - "/v2/images"
       X-Shutterstock-App-Version:
       - apitwo-731
       Cache-Control:
       - 'private; max-age: 60'
       Etag:
-      - db9c662516f46908753c30d5174e75e9
+      - aa2e34342d6e1b1f80ae2fe62c1c6e48
       X-End-User-Client-Id:
       - "<SSTK_CLIENT_ID>"
     body:
       encoding: UTF-8
-      string: '{"id":"118139110","added_date":"2012-11-09","aspect":1.5,"assets":{"small_jpg":{"display_name":"Small","dpi":72,"file_size":88064,"format":"jpg","height":333,"is_licensable":true,"width":500},"medium_jpg":{"display_name":"Med","dpi":300,"file_size":301056,"format":"jpg","height":667,"is_licensable":true,"width":1000},"huge_jpg":{"display_name":"Huge","dpi":300,"file_size":2790400,"format":"jpg","height":3090,"is_licensable":true,"width":4635},"supersize_jpg":{"display_name":"Super","dpi":300,"file_size":10112609,"format":"jpg","height":6180,"is_licensable":false,"width":9270},"huge_tiff":{"display_name":"Huge","dpi":300,"file_size":42966450,"format":"tiff","height":3090,"is_licensable":false,"width":4635},"supersize_tiff":{"display_name":"Super","dpi":300,"file_size":171865800,"format":"tiff","height":6180,"is_licensable":false,"width":9270},"preview":{"height":300,"url":"https://image.shutterstock.com/display_pic_with_logo/1306729/118139110/stock-photo-adorable-labrador-puppy-playing-with-a-chew-toy-on-white-backdrop-118139110.jpg","width":450},"small_thumb":{"height":67,"url":"https://thumb1.shutterstock.com/thumb_small/1306729/118139110/stock-photo-adorable-labrador-puppy-playing-with-a-chew-toy-on-white-backdrop-118139110.jpg","width":100},"large_thumb":{"height":100,"url":"https://thumb1.shutterstock.com/thumb_large/1306729/118139110/stock-photo-adorable-labrador-puppy-playing-with-a-chew-toy-on-white-backdrop-118139110.jpg","width":150}},"categories":[{"id":"1","name":"Animals/Wildlife"},{"id":"20","name":"NOT-CATEGORIZED"}],"contributor":{"id":"1306729"},"description":"Adorable
-        Labrador Puppy Playing with a Chew Toy on White Backdrop","image_type":"photo","is_adult":false,"keywords":["animal","animal
-        themes","backgrounds","cute","dog","domestic animals","friendship","full length","isolated","labrador","labrador
-        retriever","one animal","pets","play","puppy","purebred dog","studio shot","toy","yellow","young
-        animal"],"media_type":"image"}'
+      string: '{"data":[{"id":"241570090","aspect":1.3333,"assets":{"preview":{"height":337,"url":"https://image.shutterstock.com/display_pic_with_logo/2364116/241570090/stock-vector-drum-snare-logo-symbol-icon-graphic-vector-241570090.jpg","width":450},"small_thumb":{"height":75,"url":"https://thumb1.shutterstock.com/thumb_small/2364116/241570090/stock-vector-drum-snare-logo-symbol-icon-graphic-vector-241570090.jpg","width":100},"large_thumb":{"height":113,"url":"https://thumb1.shutterstock.com/thumb_large/2364116/241570090/stock-vector-drum-snare-logo-symbol-icon-graphic-vector-241570090.jpg","width":150}},"contributor":{"id":"2364116"},"description":"Drum,
+        Snare ,logo, symbol, icon,graphic,vector.","image_type":"vector","media_type":"image"},{"id":"409218703","aspect":1,"assets":{"preview":{"height":450,"url":"https://image.shutterstock.com/display_pic_with_logo/356458/409218703/stock-photo-ramadan-drum-d-rendered-isolated-409218703.jpg","width":450},"small_thumb":{"height":100,"url":"https://thumb10.shutterstock.com/thumb_small/356458/409218703/stock-photo-ramadan-drum-d-rendered-isolated-409218703.jpg","width":100},"large_thumb":{"height":150,"url":"https://thumb10.shutterstock.com/thumb_large/356458/409218703/stock-photo-ramadan-drum-d-rendered-isolated-409218703.jpg","width":150}},"contributor":{"id":"356458"},"description":"Ramadan
+        drum 3D Rendered Isolated","image_type":"photo","media_type":"image"}]}'
     http_version: 
-  recorded_at: Sun, 25 Dec 2016 12:06:05 GMT
+  recorded_at: Sun, 25 Dec 2016 14:03:33 GMT
 recorded_with: VCR 3.0.3
