@@ -54,6 +54,7 @@ def client
 	Client.instance.configure do |config|
 		config.client_id = ENV['SSTK_CLIENT_ID'] || "clientid"
 		config.client_secret = ENV['SSTK_CLIENT_SECRET'] || "clientsecret"
+    config.default_scopes = ['user.view', 'licenses.view']
 	end
 	Client.instance
 end
@@ -107,5 +108,5 @@ def base_api_uri
 end
 
 def access_token
-  env_or_default(:SSTK_ACCESS_TOKEN)
+  AccessToken.new({access_token: env_or_default(:SSTK_ACCESS_TOKEN), token_type: 'client_credentials', expires_in: 3600})
 end

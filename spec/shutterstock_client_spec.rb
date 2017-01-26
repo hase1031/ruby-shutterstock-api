@@ -30,8 +30,6 @@ describe Client do
 
   context 'access token' do
 
-    client_id = ENV['SSTK_CLIENT_ID'] || 'clientid'
-    client_secret  = ENV['SSTK_CLIENT_SECRET'] || 'clientsecret'
     api_url  = 'https://api.shutterstock.com/v2'
 
     it 'should raise error for invalid client credentials' do
@@ -53,10 +51,17 @@ describe Client do
         expect(subject.config.access_token).not_to be_nil
         expect(subject.options[:base_uri]).to eql(api_url)
         expect(subject.options[:oauth]).to eql(
-          client_id: client_id,
-          client_secret: client_secret
+          client_id: subject.config.client_id,
+          client_secret: subject.config.client_secret,
         )
         expect(subject.options[:headers]['Authorization']).to match(/\w+/)
+      end
+
+      it 'should get appropriate scope' do
+        scopes = ['user.view', 'licenses.view']
+        token = subject.config.access_token
+        expect(token).not_to be_nil
+        expect(token.scopes).to match_array(scopes)
       end
     end
   end
