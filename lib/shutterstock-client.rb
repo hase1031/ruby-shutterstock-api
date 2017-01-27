@@ -30,7 +30,6 @@ module ShutterstockAPI
 			@config.api_url ||= "https://api.shutterstock.com/v2"
 			raise ArgumentError, "Client ID not provided" if config.client_id.nil?
 			raise ArgumentError, "Client secret not provided" if config.client_secret.nil?
-      @config.default_scopes ||= []
 
 			@options = {
 				base_uri: config.api_url,
@@ -58,11 +57,9 @@ module ShutterstockAPI
 			! config.nil?
 		end
 
-		def get_access_token(scopes=[])
+		def get_access_token
 			options=@options
-      scopes = config.default_scopes if scopes.empty?
 			options[:body] = { client_id: config.client_id, client_secret: config.client_secret, grant_type: 'client_credentials'}
-      options[:body][:scope] = scopes.join(' ') unless scopes.empty?
 			response = self.class.post( "#{config.api_url}/oauth/access_token", options )
 
 			if response.code == 200
