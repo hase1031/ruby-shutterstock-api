@@ -12,9 +12,6 @@ module ShutterstockAPI
     # @return [String] The client secret.
     attr_accessor :client_secret
 
-		# @return [Array] The default scope of API.
-		attr_accessor :default_scopes
-
 		def initialize
 			@client_options = {}
 		end
