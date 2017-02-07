@@ -75,8 +75,8 @@ module ShutterstockAPI
     end
 
     def refresh_access_token
-      access_token = get_access_token
-      @options[:headers]['Authorization'] = bearer_token(access_token.token)
+      config.access_token = get_access_token
+      @options[:headers]['Authorization'] = bearer_token(config.access_token.token)
     end
 
 		def method_missing(method, *args, &block)
