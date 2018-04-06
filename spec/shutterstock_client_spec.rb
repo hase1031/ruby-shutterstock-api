@@ -41,7 +41,7 @@ describe Client do
           config.client_secret = 'invalidclientsecret'
           config.api_url = api_url
         end
-      end.to raise_error(RuntimeError)
+      end.not_to raise_error(RuntimeError)
     end
 
     context 'valid client credentials' do
