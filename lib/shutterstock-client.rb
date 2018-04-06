@@ -47,7 +47,7 @@ module ShutterstockAPI
 
 			@options.merge!({
 				headers: {
-					'Authorization' => bearer_token(config.access_token.token),
+					'Authorization' => bearer_token(config.access_token&.token),
 				  'User-Agent' => 'Ruby Shutterstock API Client',
 				}
 			})
@@ -65,14 +65,20 @@ module ShutterstockAPI
 			if response.code == 200
 				config.access_token = ShutterstockAPI::AccessToken.new(response)
 			else
-				raise RuntimeError, "Something went wrong: #{response.code} #{response.message}"
+				Rails.logger.error("Something went wrong: #{response.code} #{response.message}")
 			end
 			config.access_token
 		end
 
 		def token_expired?
-			config.access_token.expired?
-    end
+			expired = config.access_token&.expired?
+			if expired.nil?
+				# access_tokenなし 有効期限切れとして返す
+				true
+			else
+				expired
+			end
+		end
 
     def refresh_access_token
       config.access_token = get_access_token
