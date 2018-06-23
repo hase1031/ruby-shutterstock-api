@@ -4,14 +4,14 @@ describe Client do
 
   context "#initialize" do
     it "should require a block" do
-			expect { Client.instance.configure }.to raise_error(ArgumentError)
+      expect { Client.instance.configure }.to raise_error(ArgumentError)
     end
   end
 
   context 'basic auth' do
     it 'should raise an exception when client_id is not provided' do
       expect do
-				Client.instance.configure do |config|
+        Client.instance.configure do |config|
           config.client_secret = "12345"
           config.api_url = "http://api.shutterstock.com"
         end
@@ -20,7 +20,7 @@ describe Client do
 
     it 'should raise an exception when client_secret is not provided' do
       expect do
-				Client.instance.configure do |config|
+        Client.instance.configure do |config|
           config.client_id = "testuser"
           config.api_url = "http://api.shutterstock.com"
         end
@@ -36,7 +36,7 @@ describe Client do
 
     it 'should raise error for invalid client credentials' do
       expect do
-				Client.instance.configure do |config|
+        Client.instance.configure do |config|
           config.client_id = 'invalidclientid'
           config.client_secret = 'invalidclientsecret'
           config.api_url = api_url
