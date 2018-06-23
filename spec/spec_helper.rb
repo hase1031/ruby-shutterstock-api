@@ -51,11 +51,11 @@ RSpec.configure do |config|
 end
 
 def client
-	Client.instance.configure do |config|
-		config.client_id = ENV['SSTK_CLIENT_ID'] || "clientid"
-		config.client_secret = ENV['SSTK_CLIENT_SECRET'] || "clientsecret"
-	end
-	Client.instance
+  Client.instance.configure do |config|
+    config.client_id = ENV['SSTK_CLIENT_ID'] || "clientid"
+    config.client_secret = ENV['SSTK_CLIENT_SECRET'] || "clientsecret"
+  end
+  Client.instance
 end
 
 def client_double
