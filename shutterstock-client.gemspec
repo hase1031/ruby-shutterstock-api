@@ -14,9 +14,9 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.homepage    = 'https://github.com/shutterstock/ruby-shutterstock-api' 
   s.license     = 'Copyright shutterstock.com 2014'
-  s.add_dependency "rspec", "~> 3.0"
   s.add_dependency "httparty", "~> 0.14"
   s.add_dependency "activesupport", "~> 5.0"
+  s.add_development_dependency "rspec", "~> 3.0"
   s.add_development_dependency "pry", "~> 0.10"
   s.add_development_dependency "vcr", "~> 3.0"
   s.add_development_dependency "webmock", "~> 2.3"
