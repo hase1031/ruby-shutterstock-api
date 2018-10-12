@@ -8,6 +8,7 @@ module ShutterstockAPI
   require_relative './client/configuration'
   require_relative './client/images'
   require_relative './client/image'
+  require_relative './client/exception'
 
   class Client
     include HTTParty
@@ -39,15 +40,10 @@ module ShutterstockAPI
         }
       }
 
-      if config.access_token.nil?
-        get_access_token
-      end
-
       @options.delete_if{|k, v| k == :body}
 
       @options.merge!({
         headers: {
-          'Authorization' => bearer_token(config.access_token&.token),
           'User-Agent' => 'Ruby Shutterstock API Client',
         }
       })
@@ -65,7 +61,7 @@ module ShutterstockAPI
       if response.code == 200
         config.access_token = ShutterstockAPI::AccessToken.new(response)
       else
-        Rails.logger.error("Something went wrong: #{response.code} #{response.message}")
+        raise RequestError.new("Something went wrong: #{response.code} #{response.message}")
       end
       config.access_token
     end
