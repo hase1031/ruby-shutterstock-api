@@ -8,6 +8,7 @@ module ShutterstockAPI
   require_relative './client/configuration'
   require_relative './client/images'
   require_relative './client/image'
+  require_relative './client/exception'
 
   class Client
     include HTTParty
@@ -60,7 +61,7 @@ module ShutterstockAPI
       if response.code == 200
         config.access_token = ShutterstockAPI::AccessToken.new(response)
       else
-        Rails.logger.error("Something went wrong: #{response.code} #{response.message}")
+        raise RequestError.new("Something went wrong: #{response.code} #{response.message}")
       end
       config.access_token
     end
