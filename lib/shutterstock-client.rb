@@ -39,15 +39,10 @@ module ShutterstockAPI
         }
       }
 
-      if config.access_token.nil?
-        get_access_token
-      end
-
       @options.delete_if{|k, v| k == :body}
 
       @options.merge!({
         headers: {
-          'Authorization' => bearer_token(config.access_token&.token),
           'User-Agent' => 'Ruby Shutterstock API Client',
         }
       })
