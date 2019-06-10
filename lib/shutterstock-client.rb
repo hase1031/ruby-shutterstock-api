@@ -55,6 +55,7 @@ module ShutterstockAPI
 
     def get_access_token
       options=@options
+      options[:headers].delete('Authorization')
       options[:body] = { client_id: config.client_id, client_secret: config.client_secret, grant_type: 'client_credentials'}
       response = self.class.post( "#{config.api_url}/oauth/access_token", options )
 
